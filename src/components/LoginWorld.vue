@@ -1,12 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>Le message est:  {{ msg }}</h1>
+  <div class="login">
+    <h1>{{ msg }}</h1>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'LoginWorld',
   props: {
     msg: String
   }
@@ -27,6 +28,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #b9a342;
 }
 </style>
