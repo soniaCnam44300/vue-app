@@ -1,7 +1,6 @@
 <template>
-  <div class="login">
-    <h1>{{ msg }}</h1>
-    
+  <div class="hello">
+    <h1> {{ msg }}</h1>
   </div>
 </template>
 
@@ -28,6 +27,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #b9a342;
+  color: #42b983;
 }
 </style>

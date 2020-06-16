@@ -11,11 +11,20 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
     name: 'About',
+    beforeEnter: (to, from, next) => {
+      console.log("ok");
+      console.log(to.query)
+      if (to.query.login === "admin" && to.query.password === "admin") next()
+      else {
+        alert ("Vous n'êtes pas connecté")
+        next("/")
+      }
+    },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -24,7 +33,8 @@ Vue.use(VueRouter)
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login ,
+    
   }
 ]
 
