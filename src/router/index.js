@@ -2,12 +2,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
-
+import Composant from '../views/composantTest.vue'
 
 
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '/composant',
+      name: 'Composant',
+      component: Composant,
+    },
   {
     path: '/',
     name: 'Home',
@@ -22,15 +27,15 @@ Vue.use(VueRouter)
       let nom = to.query.login
       let mdp = to.query.password
       if (to.query.login === "admin" && to.query.password === "admin") {
-          sessionStorage.nom = nom
-          sessionStorage.mdp = mdp
+          sessionStorage.setItem('nom',nom)
+          sessionStorage.setItem('mdp', mdp)
           // console.log(nom)
           // console.log(mdp)
         next ();
       }
       else {
         alert ("Vous n'êtes pas connecté")
-        next("/")
+        next("/login")
       }
     },
     // route level code-splitting

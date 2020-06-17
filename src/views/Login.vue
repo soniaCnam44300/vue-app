@@ -3,8 +3,8 @@
   <div class="login">
   
     <img alt="Vue logo" src="../assets/logo.png">
-    <loginWorld msg="Se connecter pour accéder au information"/>
-
+    <ComposantWorld   msg="Se connecter pour accéder a la page About"  btn="Bouton acceder page composant" couleur="blue" v-on:Btn="action()"/>
+    
         <form>
             <div class="form-example" id="main">
                 <div class="form-example1">
@@ -20,19 +20,18 @@
             </div>
             </div>  
         </form>
-    
   </div>
 </template>
 
 <script>
 
   // @ is an alias to /src
-  import LoginWorld from '@/components/LoginWorld.vue'
+  import ComposantWorld from '@/components/ComposantWorld.vue'
 
   export default {
     name: 'Login',
     components: {
-      LoginWorld
+      ComposantWorld
     },
    
     data () {
@@ -59,7 +58,14 @@
             }else{
                 alert('faux')
             }
-          
+        },
+        action(){
+             this.$router.push({ 
+                    name: 'Composant', 
+                 
+               
+                });
+               
         }
     }
             
