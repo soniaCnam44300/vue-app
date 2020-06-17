@@ -1,5 +1,6 @@
-<template>
 
+<link rel="manifest" href="/manifest.json"> 
+<template>
   <div class="about">
   
     <img alt="Vue logo" src="../assets/logo.png">
