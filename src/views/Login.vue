@@ -79,7 +79,7 @@
   .form-example{
     margin-top: 40px;
     border: 3px solid #5fac64;
-    width: 20%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
