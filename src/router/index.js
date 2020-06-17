@@ -19,7 +19,15 @@ Vue.use(VueRouter)
     beforeEnter: (to, from, next) => {
       console.log("ok");
       console.log(to.query)
-      if (to.query.login === "admin" && to.query.password === "admin") next()
+      let nom = to.query.login
+      let mdp = to.query.password
+      if (to.query.login === "admin" && to.query.password === "admin") {
+          sessionStorage.nom = nom
+          sessionStorage.mdp = mdp
+          // console.log(nom)
+          // console.log(mdp)
+        next ();
+      }
       else {
         alert ("Vous n'êtes pas connecté")
         next("/")

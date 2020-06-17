@@ -39,17 +39,23 @@
       return {
           password:'admin',
           name:'admin'
+          
       }
     },
     methods: {
         connect() {
+            
             if((this.name ==='admin')&&(this.password ==='admin')){
+                
                this.$router.push({ 
                     name: 'About', 
                     query: { 
                         login : this.name,
                         password : this.password,
-                } });
+                } 
+               
+                });
+               
             }else{
                 alert('faux')
             }
