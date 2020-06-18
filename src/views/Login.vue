@@ -6,7 +6,7 @@
     <ComposantWorld   msg="Se connecter pour accéder a la page About"  btn="Bouton acceder page composant" couleur="blue" v-on:Btn="action()"/>
     
         <form>
-            <div class="form-example" id="main">
+            <div class="form-example2" id="main">
                 <div class="form-example1">
                 <label class="label" for="name"> Pseudo: </label>
                 <input class="input" type="text" v-model="name" name="name" id="name" required style="margin-left: 40px;">
@@ -76,7 +76,7 @@
 
 <style>
 
-  .form-example{
+  .form-example2{
     margin-top: 40px;
     border: 3px solid #5fac64;
     width: 80%;

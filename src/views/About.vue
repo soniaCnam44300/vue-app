@@ -1,5 +1,3 @@
-
-<link rel="manifest" href="/manifest.json"> 
 <template>
   <div class="about">
   
@@ -33,7 +31,6 @@
 
   .form-example{
     margin-top: 40px;
-    widht: 50px;
     border: 3px solid #5fac64;
     width: 50%;
     margin-left: auto;
